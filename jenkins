@@ -1,0 +1,16 @@
+pipeline {
+    agent any
+    stages {
+        stage('Download Source Code') {
+            steps {
+                git 'https://github.com/btksudharshan/march1st.git'
+            }
+        }
+        stage('validate') {
+            steps {
+                sh 'mvn validate'
+            }
+        }
+      }
+      }
+      
